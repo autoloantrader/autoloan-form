@@ -109,13 +109,12 @@ form.addEventListener("submit", function (event) {
     .catch(err => console.error("Webhook error:", err));
 
     // Continue with WordPress AJAX submission
-    fetch('/wp-admin/admin-ajax.php', {
-        method: "POST",
-        body: new URLSearchParams([...formData.entries()]),
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        }
-    })
+fetch('https://prod-XX.canada.logic.azure.com/...', {
+  method: "POST",
+  body: new URLSearchParams([...formData.entries()]),
+  headers: { "Content-Type": "application/x-www-form-urlencoded" }
+})
+
     .then(response => response.json())
     .then(result => {
         console.log("Response received:", result);
