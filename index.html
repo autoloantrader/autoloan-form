@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Loan Form</title>
+  <!-- You can link to a local CSS file if you have one -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+<div class="logo"><a href="https://autoloantrader.ca/">
+<img src="https://autoloantrader.ca/wp-content/uploads/autoloantrader/assets/logo.png" alt="Auto Loan Trader" />
+</a></div>
+<p class="phone-number">1-888-4567-xxxx</p>
+
+</nav>
+<div class="container">
+<div class="progress-bar">
+<div class="progress"></div>
+</div>
+
+
+<!-- Step 1: Vehicle Selection -->
+<form id="multiStepForm">
+
+<div class="form-step active">
+	
+<div class="heading-container">
+<h3>Find the Right Car at a Budget That Works for You</h3>
+<h4>What kind of vehicle are you searching for?</h4>
+</div>
+<div class="options">
+<div class="vehicle-option" data-value="Car"><img src="https://autoloantrader.ca/wp-content/uploads/autoloantrader/assets/car.png" alt="Car" />
+<h3>Sedan</h3>
+</div>
+<div class="vehicle-option" data-value="Truck"><img src="https://autoloantrader.ca/wp-content/uploads/autoloantrader/assets/truck.png" alt="Truck" />
+<h3>Truck</h3>
+</div>
+<div class="vehicle-option" data-value="SUV"><img src="https://autoloantrader.ca/wp-content/uploads/autoloantrader/assets/suv.png" alt="SUV" />
+<h3>Suv</h3>
+</div>
+<div class="vehicle-option" data-value="Van"><img src="https://autoloantrader.ca/wp-content/uploads/autoloantrader/assets/van.png" alt="Van" />
+<h3>Van</h3>
+</div>
+</div>
+<input id="vehicleType" name="vehicleType" type="hidden" />
+<button class="next-btn first-continue" type="button">Continue</button>
+
+</div>
+
+
+
+<!-- Step 2: Budget Selection -->
+<div class="form-step">
+<h4>What is your budget?</h4>
+<div class="button-layout"><button class="budget-btn" type="button" data-value="Under $400">$300-$375 / Month</button>
+<button class="budget-btn" type="button" data-value="$400 - 499">$375-$500 / Month</button>
+<button class="budget-btn" type="button" data-value="$500 - 600">$500-$600 / Month</button></div>
+<!-- Hidden input to store budget selection -->
+<input id="budget" name="budget" type="hidden" />
+<p class="budget-helper-text">Find vehicle options that fit your budget.</p>
+
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 3: Financing -->
+<div class="form-step">
+<h4>When do you need auto financing?</h4>
+<div class="button-layout"><button class="finance-btn" type="button" data-value="Now">Now</button>
+<button class="finance-btn" type="button" data-value="Less than 3 months">In less than 3 months</button>
+<button class="finance-btn" type="button" data-value="More than 3 months">In more than 3 months</button></div>
+<input id="financingTime" name="financingTime" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 4: Date of Birth -->
+<div class="form-step">
+<h4>What is your date of birth?</h4>
+<label class="label" for="dob">Date of Birth</label>
+<div class="date-picker-container"><input id="dob" class="dateof-b" name="dob" required="" type="date" placeholder="MM / DD / YYYY" /></div>
+<input id="hiddenDob" name="hiddenDob" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 5: Employment Status -->
+<div class="form-step">
+<h4>What is your employment status?</h4>
+<div class="button-layout"><button class="employment-btn" type="button" data-value="Full Time">Full Time</button>
+<button class="employment-btn" type="button" data-value="Part Time">Part Time</button>
+<button class="employment-btn" type="button" data-value="Unemployed">Unemployed</button></div>
+<input id="employmentStatus" name="employmentStatus" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 6: Income per month -->
+<div class="form-step">
+<h4>What is your income per month
+Before Tax/Deductions?</h4>
+<label class="label" for="income">Monthly Income Before Taxes/Deductions</label>
+<div class="income-input-container"><input id="income" class="income-input" name="income" type="text" placeholder="Monthly income" /></div>
+<input id="hiddenIncome" name="hiddenIncome" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+Your income details help us make sure your vehicle payments are easy and affordable.
+
+</div>
+<!-- Step 7: periode received income -->
+<div class="form-step">
+<h4>How long have you been receiving this income?</h4>
+<!-- Years Input -->
+<div class="duration-container">
+<div class="duration-input-box">
+<div class="input-group"><input id="years" class="duration-input" name="years" type="number" placeholder="0" />
+<span class="duration-label">Years</span></div>
+<div class="input-group"><input id="months" class="duration-input" name="months" type="number" placeholder="0" />
+<span class="duration-label">Months</span></div>
+</div>
+</div>
+<p class="info-text">Enter 1 month if you just started your job.</p>
+<!-- Hidden Inputs to Store Selection -->
+<input id="hiddenYears" name="incomeYears" type="hidden" />
+<input id="hiddenMonths" name="incomeMonths" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 8: bankruptcy -->
+<div class="form-step">
+<h4>Have you claimed bankruptcy before?</h4>
+<!-- Bankruptcy Selection Buttons -->
+<div class="button-layout-br"><button class="bankruptcy-btn" type="button" data-value="Yes">Yes</button>
+<button class="bankruptcy-btn" type="button" data-value="No">No</button></div>
+<!-- Hidden Input to Store Selection -->
+<input id="bankruptcy" name="bankruptcy" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+<!-- Step 9: Company information -->
+<div class="form-step">
+<h4>Where do you work?</h4>
+<!-- Company Name Input -->
+<label class="label" for="company-name">Company Name</label>
+<input id="companyname" class="input-field" name="companyName" type="text" placeholder="Company Name" />
+<!-- Hidden Input to Store Company Name -->
+<input id="hiddenCompanyname" name="hiddenCompanyName" type="hidden" />
+
+<!-- Job Title Input -->
+<label class="label" for="job-title">Job Title</label>
+<input id="jobtitle" class="input-field" name="jobTitle" type="text" placeholder="Job Title" />
+<!-- Hidden Input to Store Job Title -->
+<input id="hiddenJobtitle" name="hiddenJobTitle" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+We won't come visit, but we need these details to confirm your employment status so you can get the best rates possible.
+
+</div>
+<!-- Step 10: Home Address -->
+<div class="form-step">
+<h4>Where are you looking for a vehicle?</h4>
+<label class="label" for="home-address">What Is Your Home Address?</label>
+<input id="homeaddress" class="input-field" name="homeAddress" type="text" placeholder="Home Address" />
+<!-- Hidden Input to Store Home Address -->
+<input id="hiddenHomeaddress" name="hiddenHomeAddress" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+Providing your location helps find the best deals near you.
+
+</div>
+<!-- Step 11: User Name -->
+<div class="form-step">
+<h4>Almost Done!
+What is your name?</h4>
+<!-- First Name -->
+<label class="label" for="first-name">First Name</label>
+<input id="firstname" class="input-field" name="firstName" type="text" placeholder="First Name" />
+
+<!-- Last Name -->
+<label class="label" for="last-name">Last Name</label>
+<input id="lastname" class="input-field" name="lastName" type="text" placeholder="Last Name" />
+
+<input id="hiddenFirstname" name="hiddenFirstName" type="hidden" />
+<input id="hiddenLastname" name="hiddenLastName" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="next-btn" type="button">Continue</button></div>
+</div>
+
+
+<!-- Step 12: Email & Phone Number -->
+<div class="form-step">
+<h4>Almost Done!
+What is your contact information?</h4>
+<!-- Email Address -->
+<label class="label" for="email">Email Address</label>
+<input id="email" class="input-field" name="email" required="" type="email" placeholder="Email Address" />
+
+<!-- Primary Number -->
+<label class="label" for="phone">Primary Number</label>
+<input id="phone" class="input-field" name="phone" required="" type="tel" placeholder="Primary Number" />
+
+<input id="hiddenEmail" name="hiddenEmail" type="hidden" />
+<input id="hiddenPhone" name="hiddenPhone" type="hidden" />
+<div class="button-container"><button class="prev-btn" type="button">Back</button>
+<button class="submit-btn" type="submit">Submit</button></div>
+</div>
+</form></div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
